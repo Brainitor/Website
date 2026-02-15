@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainitor — Early Detection for Better Brain Health</title>
+  <meta name="description" content="Brainitor combines AI and everyday interactions to detect the earliest signs of cognitive change — giving you and your loved ones the gift of time.">
+  <meta name="keywords" content="brain health, early detection, Alzheimer's, cognitive health, AI, dementia, neuroscience">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Brainitor — Early Detection for Better Brain Health">
+  <meta property="og:description" content="Brainitor combines AI and everyday interactions to detect the earliest signs of cognitive change — giving you and your loved ones the gift of time.">
+  <meta property="og:image" content="https://brainitor.com/assets/og-image.png">
+  <meta property="og:url" content="https://brainitor.com">
+  <meta property="og:site_name" content="Brainitor">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brainitor — Early Detection for Better Brain Health">
+  <meta name="twitter:description" content="Brainitor combines AI and everyday interactions to detect the earliest signs of cognitive change.">
+  <meta name="twitter:image" content="https://brainitor.com/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Brainitor",
+    "url": "https://brainitor.com",
+    "description": "Consumer-first, multi-modal AI platform for early cognitive decline detection.",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Dr. Hila Ben-Moshe",
+        "jobTitle": "Co-Founder & CSO"
+      },
+      {
+        "@type": "Person",
+        "name": "Amos Haviv",
+        "jobTitle": "Co-Founder & CEO"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Analytics placeholder: Add your Google Analytics or Plausible snippet here -->
+</head>
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="/" class="nav__logo" aria-label="Brainitor home">
+        <img class="nav__logo-icon" src="img/logo.png" alt="" width="36" height="36">
+        <span class="nav__logo-text">Brainitor</span>
+      </a>
+      <a href="#waitlist" class="btn btn--small">Get Early Access</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <h1 class="hero__title">What if you could see Alzheimer's coming &mdash; years before it arrives?</h1>
+        <p class="hero__subtitle">Brainitor combines AI and everyday interactions to detect the earliest signs of cognitive change &mdash; giving you and your loved ones the gift of time.</p>
+        <form class="hero__form waitlist-form" id="heroForm">
+          <div class="hero__form-row">
+            <label for="hero-email" class="sr-only">Email address</label>
+            <input type="email" id="hero-email" name="email" placeholder="Enter your email" required class="input" autocomplete="email">
+            <button type="submit" class="btn">Join Waitlist</button>
+          </div>
+          <p class="hero__form-note">Be the first to know when we launch. No spam, ever.</p>
+        </form>
+        <div class="hero__form-success" id="heroFormSuccess" hidden>
+          <p>Thank you! You're on the list. We'll be in touch soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">The treatments are finally here.<br>Early detection is the missing piece.</h2>
+          <p class="section__subtitle">Alzheimer's affects millions — and most cases are caught too late for the best treatments to work.</p>
+        </div>
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat__number">55M+</span>
+            <span class="stat__label">people worldwide living with dementia</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">5th</span>
+            <span class="stat__label">leading cause of death in adults over 65</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">75%</span>
+            <span class="stat__label">of cases go undiagnosed until moderate or severe stages</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">Early</span>
+            <span class="stat__label">New FDA-approved treatments work best when started early — but only if you catch it</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section approach" id="approach">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">A new approach to brain health</h2>
+          <p class="section__subtitle">We're building the world's most comprehensive early detection platform — one that fits into your daily life.</p>
+        </div>
+        <div class="cards reveal">
+          <div class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect x="4" y="8" width="32" height="24" rx="4" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M12 20h4l2-4 4 8 2-4h4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Cognitive Assessments</h3>
+            <p class="card__text">Brief, gamified brain health checks designed to measure memory, attention, and processing speed in minutes.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 6c-1 0-3 1-3 4v8c0 3 2 4 3 4s3-1 3-4v-8c0-3-2-4-3-4z" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M12 18v2c0 4.4 3.6 8 8 8s8-3.6 8-8v-2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="20" y1="28" x2="20" y2="34" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="15" y1="34" x2="25" y2="34" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Speech &amp; Language Analysis</h3>
+            <p class="card__text">AI-powered analysis of everyday speech patterns to identify subtle linguistic changes that may signal early decline.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="14" r="8" stroke="var(--accent)" stroke-width="1.5"/>
+                <path d="M14 30c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M28 10l4-2m-24 2L4 8m8 24l-2 4m20-4l2 4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Movement &amp; Sleep</h3>
+            <p class="card__text">Passive monitoring through wearable integration — tracking gait, activity patterns, and sleep quality for cognitive signals.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M8 28V12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M16 28V8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M24 28V16" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M32 28V10" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="8" cy="12" r="2.5" fill="var(--accent)"/>
+                <circle cx="16" cy="8" r="2.5" fill="var(--accent)"/>
+                <circle cx="24" cy="16" r="2.5" fill="var(--accent)"/>
+                <circle cx="32" cy="10" r="2.5" fill="var(--accent)"/>
+                <line x1="4" y1="32" x2="36" y2="32" stroke="var(--accent)" stroke-width="1.5" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="card__title">Longitudinal Tracking</h3>
+            <p class="card__text">Your personal cognitive baseline, tracked over time — because meaningful change is only visible across months and years.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Now -->
+    <section class="section why-now" id="why-now">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Why now</h2>
+          <p class="section__subtitle">A once-in-a-generation convergence is making early detection possible for the first time.</p>
+        </div>
+        <div class="grid-2x2 reveal">
+          <div class="grid-item">
+            <div class="grid-item__marker" aria-hidden="true">01</div>
+            <h3 class="grid-item__title">Breakthrough Treatments</h3>
+            <p class="grid-item__text">FDA-approved therapies like Leqembi and donanemab can slow progression — but only when started early.</p>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__marker" aria-hidden="true">02</div>
+            <h3 class="grid-item__title">AI Pattern Recognition</h3>
+            <p class="grid-item__text">Modern AI can detect subtle cognitive patterns across speech, movement, and behavior that humans simply cannot.</p>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__marker" aria-hidden="true">03</div>
+            <h3 class="grid-item__title">Ubiquitous Wearables</h3>
+            <p class="grid-item__text">Smartwatches and fitness trackers generate rich, continuous health data — creating a passive monitoring layer.</p>
+          </div>
+          <div class="grid-item">
+            <div class="grid-item__marker" aria-hidden="true">04</div>
+            <h3 class="grid-item__title">Consumer Demand</h3>
+            <p class="grid-item__text">People are taking charge of their health like never before — and brain health is the next frontier.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Built by experts in neuroscience and engineering</h2>
+        </div>
+        <div class="team__grid reveal">
+          <div class="team-card">
+            <img class="team-card__photo" src="img/hila.jpeg" alt="Dr. Hila Ben-Moshe" width="80" height="80">
+            <h3 class="team-card__name">Dr. Hila Ben-Moshe</h3>
+            <p class="team-card__role">Co-Founder &amp; CSO</p>
+            <ul class="team-card__details">
+              <li>PhD Neuroscience</li>
+              <li>Alzheimer's disease patents</li>
+              <li>Previously Rafa's Moonshot</li>
+            </ul>
+            <a href="https://www.linkedin.com/in/hila-ben-moshe/" target="_blank" rel="noopener noreferrer" class="team-card__social" aria-label="Hila Ben-Moshe on LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M4.5 3C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6 6 5.33 6 4.5 5.33 3 4.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.04C11.4 8.5 12.6 8 13.8 8c2.8 0 3.2 1.8 3.2 4.2V17h-3v-4.3c0-1 0-2.4-1.5-2.4s-1.7 1.2-1.7 2.3V17h-3V8z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo" src="img/amos.jpeg" alt="Amos Haviv" width="80" height="80">
+            <h3 class="team-card__name">Amos Haviv</h3>
+            <p class="team-card__role">Co-Founder &amp; CEO</p>
+            <ul class="team-card__details">
+              <li>20+ years engineering leadership</li>
+              <li>Sr. Engineering Manager, Booking.com</li>
+              <li>Published author</li>
+            </ul>
+            <a href="https://www.linkedin.com/in/amoshaviv/" target="_blank" rel="noopener noreferrer" class="team-card__social" aria-label="Amos Haviv on LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M4.5 3C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6 6 5.33 6 4.5 5.33 3 4.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.04C11.4 8.5 12.6 8 13.8 8c2.8 0 3.2 1.8 3.2 4.2V17h-3v-4.3c0-1 0-2.4-1.5-2.4s-1.7 1.2-1.7 2.3V17h-3V8z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Waitlist -->
+    <section class="section cta" id="waitlist">
+      <div class="container">
+        <div class="cta__inner reveal">
+          <h2 class="section__title">Be among the first to know</h2>
+          <p class="section__subtitle">Join our early access community and get notified when Brainitor launches.</p>
+          <form class="cta__form waitlist-form" id="ctaForm">
+            <div class="cta__form-row">
+              <label for="cta-email" class="sr-only">Email address</label>
+              <input type="email" id="cta-email" name="email" placeholder="Enter your email" required class="input" autocomplete="email">
+              <button type="submit" class="btn">Join Waitlist</button>
+            </div>
+          </form>
+          <div class="cta__form-success" id="ctaFormSuccess" hidden>
+            <p>Thank you! You're on the list. We'll be in touch soon.</p>
+          </div>
+          <div class="cta__links">
+            <a href="mailto:hello@brainitor.com?subject=Investor%20Inquiry">I'm an investor</a>
+            <span class="cta__links-divider" aria-hidden="true">&middot;</span>
+            <a href="mailto:hello@brainitor.com?subject=Research%20Collaboration">I'm a researcher</a>
+            <span class="cta__links-divider" aria-hidden="true">&middot;</span>
+            <a href="mailto:hello@brainitor.com?subject=Early%20Access%20Interest">I'm interested in my brain health</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="nav__logo-text">Brainitor</span>
+          <p class="footer__tagline">The future of brain health starts with knowing sooner.</p>
+        </div>
+        <div class="footer__social">
+          <a href="#" aria-label="Brainitor on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M4.5 3C3.67 3 3 3.67 3 4.5S3.67 6 4.5 6 6 5.33 6 4.5 5.33 3 4.5 3zM3 8h3v9H3V8zm5.5 0H11v1.2h.04C11.4 8.5 12.6 8 13.8 8c2.8 0 3.2 1.8 3.2 4.2V17h-3v-4.3c0-1 0-2.4-1.5-2.4s-1.7 1.2-1.7 2.3V17h-3V8z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Brainitor on X (Twitter)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M15.27 3h2.51l-5.49 6.27L18.6 17h-5.06l-3.96-5.18L5.16 17H2.64l5.87-6.71L2.4 3h5.19l3.58 4.73L15.27 3zm-.88 12.57h1.39L6.73 4.43H5.24l9.15 11.14z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Brainitor. All rights reserved.</p>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <p class="footer__disclaimer">Brainitor is not a medical device and does not provide medical diagnosis. Always consult a healthcare professional.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
