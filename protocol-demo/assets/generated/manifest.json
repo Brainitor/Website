@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "generator": {
+    "mode": "OpenAI built-in image generation tool",
+    "created": "2026-08-15",
+    "api_key_required": false
+  },
+  "scientific_status": "Demo-only; not validated, normed, difficulty-matched, or approved for clinical use.",
+  "composition_strategy": {
+    "orr": "Empty-room backplates and transparent object layers are composed deterministically in HTML/CSS.",
+    "mdt_os": "Base and comparison frames reuse the same generated pixels; repeat trials are exact and lure changes are deterministic overlays or transforms.",
+    "csr": "Independent photographic scenes are used as old items and new recognition foils."
+  },
+  "assets": [
+    {
+      "id": "room-warm-cream",
+      "files": ["rooms/warm-cream.png", "rooms/warm-cream.jpg"],
+      "source_output": "exec-99e30958-6fba-4eeb-b77d-b6e9d6cf1776.png",
+      "role": "ORR/MDT empty-room backplate",
+      "prompt_brief": "Square photorealistic empty warm-cream room with pale oak floor, centered window, and right doorway; generic, no furniture, people, text, or logos."
+    },
+    {
+      "id": "room-soft-sage",
+      "files": ["rooms/soft-sage.png", "rooms/soft-sage.jpg"],
+      "source_output": "exec-5ff7bba5-3168-4dda-bad1-c70ac31caa46.png",
+      "role": "ORR/MDT empty-room backplate",
+      "prompt_brief": "Square photorealistic empty soft-sage room with a left window and right wall niche; generic, no furniture, people, text, or logos."
+    },
+    {
+      "id": "room-blue-gray",
+      "files": ["rooms/blue-gray.png", "rooms/blue-gray.jpg"],
+      "source_output": "exec-24ae5c01-52d7-40f2-b6a5-6971b6542f93.png",
+      "role": "ORR/MDT empty-room backplate",
+      "prompt_brief": "Square photorealistic empty blue-gray room with a small high window and left doorway; generic, no furniture, people, text, or logos."
+    },
+    {
+      "id": "object-lamp",
+      "files": ["objects/source/lamp-key.png", "objects/lamp.png"],
+      "source_output": "exec-22c725ba-814f-4d79-a39c-cee999d7a1e6.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Front-view mustard-shade floor lamp on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-chair",
+      "files": ["objects/source/chair-key.png", "objects/chair.png"],
+      "source_output": "exec-aa779bc3-b62d-48fc-a1e1-be509b9ba190.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Front three-quarter indigo upholstered chair on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-plant",
+      "files": ["objects/source/plant-key.png", "objects/plant.png"],
+      "source_output": "exec-769a51e4-8e9d-43fe-be8a-7d98c1242f64.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Potted rubber plant on a flat magenta chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-table",
+      "files": ["objects/source/table-key.png", "objects/table.png"],
+      "source_output": "exec-4fa23a3a-5f37-4a94-a838-b1d03eb9f500.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Small round walnut side table on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-clock",
+      "files": ["objects/source/clock-key.png", "objects/clock.png"],
+      "source_output": "exec-52cd60e9-8f7a-466a-8144-ace3725ad248.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Minimal round wall clock without numerals on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-stool",
+      "files": ["objects/source/stool-key.png", "objects/stool.png"],
+      "source_output": "exec-89a534b0-75a2-489d-9b46-86de64dc6432.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Rust-colored round upholstered stool on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "object-cabinet",
+      "files": ["objects/source/cabinet-key.png", "objects/cabinet.png"],
+      "source_output": "exec-9f990d5a-966c-4abc-b14a-c0c637c8e3ad.png",
+      "role": "Reusable transparent object layer",
+      "prompt_brief": "Small walnut two-door cabinet on a flat green chroma-key background; isolated, no text, logo, border, or extra object."
+    },
+    {
+      "id": "csr-lake",
+      "files": ["scenes/lake.png", "scenes/lake.jpg"],
+      "source_output": "exec-ac03d1f0-8343-4b60-961b-7deba56c5d3b.png",
+      "role": "CSR old outside scene",
+      "prompt_brief": "Generic misty mountain lake, photorealistic documentary style, moderate detail, no people, text, logos, or famous landmarks."
+    },
+    {
+      "id": "csr-kitchen",
+      "files": ["scenes/kitchen.png", "scenes/kitchen.jpg"],
+      "source_output": "exec-96b63d51-05dc-4ab0-aa1a-02536164bf3d.png",
+      "role": "CSR old inside scene",
+      "prompt_brief": "Generic lived-in kitchen, photorealistic documentary style, moderate detail, no people, readable text, logos, or screens."
+    },
+    {
+      "id": "csr-terrace",
+      "files": ["scenes/terrace.png", "scenes/terrace.jpg"],
+      "source_output": "exec-dfd9ab14-b9ca-430a-835a-6e878bb28fb9.png",
+      "role": "CSR old outside scene",
+      "prompt_brief": "Generic stone terrace overlooking soft hills, photorealistic documentary style, moderate detail, no people, text, logos, or landmarks."
+    },
+    {
+      "id": "csr-study",
+      "files": ["scenes/study.png", "scenes/study.jpg"],
+      "source_output": "exec-694d5bd9-9a72-44a3-b1c3-94291b6822e6.png",
+      "role": "CSR old inside scene",
+      "prompt_brief": "Generic quiet study with desk and books, photorealistic documentary style, moderate detail, no people, readable text, logos, or screens."
+    },
+    {
+      "id": "csr-garden",
+      "files": ["scenes/garden.png", "scenes/garden.jpg"],
+      "source_output": "exec-076ce7a8-83b1-4245-917c-10c29f7bb88d.png",
+      "role": "CSR old outside scene",
+      "prompt_brief": "Generic garden path and bench, photorealistic documentary style, moderate detail, no people, text, logos, or landmarks."
+    },
+    {
+      "id": "csr-gallery",
+      "files": ["scenes/gallery.png", "scenes/gallery.jpg"],
+      "source_output": "exec-80706f55-dd1c-4af9-923f-9067e296c349.png",
+      "role": "CSR old inside scene",
+      "prompt_brief": "Generic small gallery with abstract art, photorealistic documentary style, moderate detail, no people, readable text, or logos."
+    },
+    {
+      "id": "csr-hall",
+      "files": ["scenes/hall.png", "scenes/hall.jpg"],
+      "source_output": "exec-7b2b956f-581b-40e2-8602-3af83dd0f48c.png",
+      "role": "CSR new inside foil",
+      "prompt_brief": "Generic domestic entrance hall, photorealistic documentary style, moderate detail, no people, readable text, logos, or screens."
+    },
+    {
+      "id": "csr-cliffs",
+      "files": ["scenes/cliffs.png", "scenes/cliffs.jpg"],
+      "source_output": "exec-169e6847-46e4-492e-b3e1-f67030ff2c45.png",
+      "role": "CSR new outside foil",
+      "prompt_brief": "Generic rugged sea cliffs from a safe overlook, overcast daylight, photorealistic documentary style, no people, text, logos, or famous landmarks."
+    },
+    {
+      "id": "csr-bedroom",
+      "files": ["scenes/bedroom.png", "scenes/bedroom.jpg"],
+      "source_output": "exec-3a5dd36d-8da7-484d-be9b-235853771929.png",
+      "role": "CSR new inside foil",
+      "prompt_brief": "Modest generic bedroom with made bed, bedside table and lamp, neutral daylight, photorealistic documentary style, no people, readable text, logos, or screens."
+    }
+  ]
+}

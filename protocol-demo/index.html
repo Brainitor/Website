@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive scientific review demo of three visual memory protocols used by Brainitor." />
+    <title>Brainitor Protocol Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#game-root">Skip to the protocol demo</a>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Brainitor Protocol Lab home">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>
+          <strong>Brainitor</strong>
+          <small>Protocol Lab</small>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <button class="review-guide-trigger" id="open-review-guide" type="button">
+          <span aria-hidden="true">?</span>
+          Review guide
+        </button>
+        <div class="build-status" role="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Scientific review build
+        </div>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <nav class="protocol-nav" aria-label="Memory protocols">
+        <div class="nav-heading">
+          <p class="eyebrow">Review queue</p>
+          <h1>Three memory protocols</h1>
+          <p>Select a task, play the shortened flow, then inspect what the demo records.</p>
+        </div>
+
+        <div class="protocol-list" role="list">
+          <button class="protocol-tab is-active" type="button" data-protocol="mdt" aria-pressed="true">
+            <span class="protocol-number">01</span>
+            <span>
+              <strong>Snapshot</strong>
+              <small>MDT-OS · memory precision</small>
+            </span>
+            <span class="nav-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="protocol-tab" type="button" data-protocol="orr" aria-pressed="false">
+            <span class="protocol-number">02</span>
+            <span>
+              <strong>Room Recall</strong>
+              <small>ORR · associative memory</small>
+            </span>
+            <span class="nav-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <button class="protocol-tab" type="button" data-protocol="csr" aria-pressed="false">
+            <span class="protocol-number">03</span>
+            <span>
+              <strong>Scene Memory</strong>
+              <small>CSR · recognition memory</small>
+            </span>
+            <span class="nav-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <section class="fidelity-note" aria-labelledby="fidelity-title">
+          <div class="fidelity-icon" aria-hidden="true">i</div>
+          <div>
+            <h2 id="fidelity-title">Representative, not validated</h2>
+            <p>Stimuli are AI-generated demo assets and trial counts are shortened for review. They are not clinical assets.</p>
+          </div>
+        </section>
+      </nav>
+
+      <section class="demo-workspace" aria-labelledby="demo-title">
+        <div class="workspace-heading">
+          <div>
+            <p class="eyebrow">Participant view</p>
+            <h2 id="demo-title">Interactive protocol</h2>
+          </div>
+
+          <label class="speed-control">
+            <span>
+              <strong>Accelerated walkthrough</strong>
+              <small>Shorten stimulus exposure for rapid review</small>
+            </span>
+            <input id="reviewer-mode" type="checkbox" />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+        </div>
+
+        <div class="reviewer-banner is-hidden" id="reviewer-banner">
+          <span aria-hidden="true">⚗</span>
+          <p><strong>Accelerated walkthrough is on.</strong> Stimulus exposure is shortened; task logic and scoring are unchanged.</p>
+        </div>
+
+        <div class="device-stage">
+          <div class="device-shadow" aria-hidden="true"></div>
+          <section class="phone" aria-label="Mobile task preview">
+            <div class="phone-hardware" aria-hidden="true"><span></span></div>
+            <div class="phone-screen">
+              <div class="participant-topbar">
+                <button class="icon-button" id="restart-button" type="button" aria-label="Restart the current protocol">↺</button>
+                <div class="phase-progress" aria-live="polite">
+                  <small id="phase-label">Orientation</small>
+                  <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+                </div>
+                <button class="icon-button" id="info-button" type="button" aria-label="Show the current protocol note">i</button>
+              </div>
+
+              <div id="game-root" class="game-root" tabindex="-1" aria-live="polite"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="demo-actions">
+          <button class="text-button" id="restart-secondary" type="button">Restart protocol</button>
+          <span id="keyboard-hint">Tip: use Tab and Enter to test keyboard access.</span>
+        </div>
+      </section>
+
+      <aside class="inspector" aria-labelledby="inspector-title">
+        <div class="inspector-heading">
+          <div>
+            <p class="eyebrow">Scientist view</p>
+            <h2 id="inspector-title">Protocol inspector</h2>
+          </div>
+          <span class="source-pill">Polk et al. 2026</span>
+        </div>
+
+        <div class="inspector-tabs" role="tablist" aria-label="Protocol inspector sections">
+          <button type="button" role="tab" aria-selected="true" aria-controls="panel-protocol" id="tab-protocol" data-panel="protocol">Protocol</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-events" id="tab-events" data-panel="events">Events <span id="event-count">0</span></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-score" id="tab-score" data-panel="score">Scoring</button>
+        </div>
+
+        <section class="inspector-panel is-visible" id="panel-protocol" role="tabpanel" aria-labelledby="tab-protocol">
+          <div id="protocol-summary"></div>
+        </section>
+
+        <section class="inspector-panel" id="panel-events" role="tabpanel" aria-labelledby="tab-events" hidden>
+          <div class="event-toolbar">
+            <p>Local demo telemetry</p>
+            <button class="text-button" id="clear-events" type="button">Clear</button>
+          </div>
+          <ol class="event-log" id="event-log">
+            <li class="empty-event">Start the protocol to see trial events.</li>
+          </ol>
+        </section>
+
+        <section class="inspector-panel" id="panel-score" role="tabpanel" aria-labelledby="tab-score" hidden>
+          <div id="score-summary"></div>
+        </section>
+
+        <footer class="inspector-footer">
+          <span class="legend-item"><span class="legend-dot paper"></span> Paper verified</span>
+          <span class="legend-item"><span class="legend-dot assumption"></span> Demo assumption</span>
+        </footer>
+      </aside>
+    </main>
+
+    <dialog class="review-dialog" id="review-dialog" aria-labelledby="review-dialog-title" aria-describedby="review-dialog-summary">
+      <div class="review-dialog-shell">
+        <header class="review-dialog-header">
+          <div>
+            <p class="eyebrow">Scientific review guide</p>
+            <h2 id="review-dialog-title">What this build demonstrates</h2>
+            <p id="review-dialog-summary">A shortened, interactive review of three visual memory paradigms mapped from Polk et al. (2026).</p>
+          </div>
+          <button class="review-dialog-close" id="close-review-guide" type="button" aria-label="Close review guide">×</button>
+        </header>
+
+        <div class="review-dialog-body">
+          <section class="review-introduction" aria-labelledby="review-purpose-title">
+            <h3 id="review-purpose-title">Purpose</h3>
+            <p>This demo lets us verify the participant flow, response mechanics, event capture, and scoring logic before building a study-ready implementation. It does not provide a diagnosis or a validated cognitive result.</p>
+          </section>
+
+          <section aria-labelledby="review-protocols-title">
+            <h3 id="review-protocols-title">What is implemented</h3>
+            <dl class="review-protocol-list">
+              <div>
+                <dt><span>MDT-OS</span> Snapshot</dt>
+                <dd>Exact repeat versus subtle lure judgments, change localization, and shortened one-back and interleaved two-back phases.</dd>
+              </div>
+              <div>
+                <dt><span>ORR</span> Room Recall</dt>
+                <dd>Two object-location associations per room, followed by immediate and delayed three-choice recall.</dd>
+              </div>
+              <div>
+                <dt><span>CSR</span> Scene Memory</dt>
+                <dd>Inside or outside encoding, a delayed recognition phase, and yes, no, or unsure responses for old and new scenes.</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section aria-labelledby="review-steps-title">
+            <h3 id="review-steps-title">How to review it</h3>
+            <ol class="review-steps">
+              <li><span>Choose one of the three protocols in the left navigation.</span></li>
+              <li><span>Leave <strong>Accelerated walkthrough</strong> off to review mapped stimulus exposure. Turn it on only to move through MDT-OS and ORR more quickly.</span></li>
+              <li><span>Complete the participant flow inside the phone. Long delay gates use a clearly labeled manual simulation in this demo.</span></li>
+              <li><span>Use the scientist inspector on the right, or below on smaller screens, to check protocol provenance, event telemetry, and scoring.</span></li>
+            </ol>
+          </section>
+
+          <section class="review-scope" aria-labelledby="review-scope-title">
+            <h3 id="review-scope-title">Review boundaries</h3>
+            <p>Trial counts are abbreviated. The AI-generated scenes, composite rooms, MDT hit regions, and 500 ms neutral interval between CSR scenes are demo assets or implementation assumptions. Full stimulus matching, calibration, quality-control rules, and clinical validation are still required before research or clinical use.</p>
+          </section>
+        </div>
+
+        <footer class="review-dialog-footer">
+          <p>No per-trial correctness or participant-facing score is shown.</p>
+          <button class="review-dialog-primary" id="start-scientific-review" type="button">Begin scientific review</button>
+        </footer>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
