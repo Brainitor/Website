@@ -359,6 +359,7 @@ ul {
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 0.5rem;
+  white-space: nowrap;
 }
 
 .stat__label {
